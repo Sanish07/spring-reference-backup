@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="blackInk" class="com.xml_config.Inks.BlackInk"/>
+
+    <bean id="redInk" class="com.xml_config.Inks.RedInk"/>
+
+    <bean id="fountainPen" class="com.xml_config.Pens.FountainPen">
+        <constructor-arg ref="blackInk"/>
+<!--        Using constructor-arg for constructor injection based Bean-->
+    </bean>
+
+    <bean id="ballPen" class="com.xml_config.Pens.BallPen">
+        <constructor-arg ref="redInk"/>
+        <!--        Using constructor-arg for constructor injection based Bean-->
+    </bean>
+
+    <bean id="gelPen" class="com.xml_config.Pens.GelPen">
+        <property name="ink" ref="blackInk"/>
+        <!--        Using property for setter injection based Bean-->
+    </bean>
+
+    <bean id="writer" class="com.xml_config.Writer">
+        <constructor-arg ref="gelPen"/>
+    </bean>
+
+
+</beans>
