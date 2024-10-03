@@ -5,6 +5,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class EataryApplication {
     public static void main(String[] args) {
+        //You will see only those beans which have been annotated with @Lazy
+        //would print init statement in console, which have been called/referenced.
         ApplicationContext context = new AnnotationConfigApplicationContext(EataryAppConfig.class);
         Customer customer = context.getBean(Customer.class);
         System.out.println(customer.getFood());
