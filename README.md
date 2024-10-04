@@ -10,3 +10,4 @@
 1.6. Lazy Initialization<br>
 1.7. Properties<br>
 1.8. XML value injection(Primitives and Non-primitives)<br>
+1.9. Spring Profiles<br>
