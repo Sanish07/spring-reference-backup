@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="student" class="com.xml_inj_advanced.Student">
+        <constructor-arg index="0" type="int" value="1001"/>
+        <property name="studentName" value="Sanish"/>
+        <property name="cgpa" value="8.16F"/>
+
+        <property name="subjects">
+            <list>
+                <value>Spring</value>
+                <value>React</value>
+                <value>AWS</value>
+            </list>
+        </property>
+
+        <property name="referrals">
+            <set>
+                <value>1106</value>
+                <value>1308</value>
+                <value>1549</value>
+            </set>
+        </property>
+
+        <property name="scores">
+            <map>
+                <entry key="Spring" value="94"/>
+                <entry key="React" value="87"/>
+                <entry key="AWS" value="78"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>
