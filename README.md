@@ -11,3 +11,9 @@
 1.7. Properties<br>
 1.8. XML value injection(Primitives and Non-primitives)<br>
 1.9. Spring Profiles<br>
+
+<br><br>
+
+2. <strong>Spring JDBC</strong><br>
+2.1. Spring JDBC Introduction <br>
+2.2. Configuring XML for database connection
