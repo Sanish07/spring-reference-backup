@@ -17,8 +17,11 @@
         <property name="dataSource" ref="dataSourceBean"/>
     </bean>
 
+    <bean id="rowMapperImpl" class="com.jdbc_intro.dao.RowMapperImpl"/>
+
     <bean id="studentDAOImpl" class="com.jdbc_intro.dao.StudentDAOImpl">
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
+        <property name="rowMapper" ref="rowMapperImpl"/>
     </bean>
 
 </beans>

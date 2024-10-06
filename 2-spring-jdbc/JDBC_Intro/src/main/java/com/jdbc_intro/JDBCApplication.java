@@ -24,12 +24,15 @@ public class JDBCApplication {
 
         //Initializing IOC Container - Via XML config
 //        ApplicationContext context = new ClassPathXmlApplicationContext("student_jdbc.xml");
-
+                             //OR
         //Initializing IOC Container - Via Java Config
         ApplicationContext context = new AnnotationConfigApplicationContext(JdbcJavaConfig.class);
 
+
         //Getting DAO Implementation Bean from XML
         StudentDAOImpl daoImpl = context.getBean("studentDAOImpl", StudentDAOImpl.class);
+
+
 
         /* Insertion */
 //        //Creating new Student Object
