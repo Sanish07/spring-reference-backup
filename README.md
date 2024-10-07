@@ -21,3 +21,7 @@
 2.4. Insert, Update and Delete operations with JdbcTemplate <br>
 2.5. Configuring RowMapper implementation class for Select opearations <br>
 2.6. Single-object Select queries and Multi-Object Select Queries implementation with JdbcTemplate and RowMapper<br>
+
+<br>
+
+3. <strong>Spring Boot</strong><br>
