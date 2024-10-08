@@ -25,3 +25,6 @@
 <br>
 
 3. <strong>Spring Boot</strong><br>
+3.1. Understanding Spring Boot project structure <br>
+3.2. Customizing Application Banner <br>
+3.3. Testing Spring Core features in Spring Boot application <br>
