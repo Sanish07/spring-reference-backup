@@ -28,3 +28,4 @@
 3.1. Understanding Spring Boot project structure <br>
 3.2. Customizing Application Banner <br>
 3.3. Testing Spring Core features in Spring Boot application <br>
+3.4. Reading System and Custom Properties with Environment interface <br>
