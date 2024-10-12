@@ -11,8 +11,8 @@ public class SpringBootIntroApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(SpringBootIntroApplication.class, args);
-//		FirstBean bean = context.getBean("firstBean", FirstBean.class);
-//		System.out.println(bean.greet());
+		FirstBean bean = context.getBean(FirstBean.class);
+		System.out.println(bean.greet());
 
 		ReadSysProperties sys = context.getBean(ReadSysProperties.class);
 		System.out.println("OS Name : "+sys.getOSVersion());

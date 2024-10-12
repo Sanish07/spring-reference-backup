@@ -29,3 +29,5 @@
 3.2. Customizing Application Banner <br>
 3.3. Testing Spring Core features in Spring Boot application <br>
 3.4. Reading System and Custom Properties with Environment interface <br>
+3.5. Introduction to Spring REST Architecture <br>
+3.6. Working with Controller Layer and HTTP Requests+Responses <br>

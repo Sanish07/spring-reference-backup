@@ -1,7 +1,5 @@
 package com.sanish.spring_boot_intro.pojo;
 
-import java.util.Objects;
-
 public class FirstBean {
 
     private String greetWord; //Mandatory Dependency - To be set by CI
