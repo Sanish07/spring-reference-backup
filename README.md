@@ -31,3 +31,8 @@
 3.4. Reading System and Custom Properties with Environment interface <br>
 3.5. Introduction to Spring REST Architecture <br>
 3.6. Working with Controller Layer and HTTP Requests+Responses <br>
+3.7. Path Parameters and Query Parameters in Routing <br>
+3.8. Spring Data JPA <br>
+3.9. Defining application properties with YAML data serialization file <br>
+3.10. Configuring PostgreSQL for database operations <br>
+3.11. Creating Entity class and mapping class fields with database schema <br>

@@ -28,4 +28,12 @@ public class WelcomeController {
             @PathVariable("u-name") String userName){
         return "Hello "+userName;
     }
+
+    @GetMapping("/verify")
+    public String queryParam(
+            @RequestParam("key") String key,
+            @RequestParam("name") String name
+    ){
+        return "Key is : "+key+"\n Name is : "+name;
+    }
 }
