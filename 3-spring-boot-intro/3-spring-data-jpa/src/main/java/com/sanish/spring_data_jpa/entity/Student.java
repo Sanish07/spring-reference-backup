@@ -1,23 +1,29 @@
 package com.sanish.spring_data_jpa.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "student")
 public class Student {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "first_name", length = 20)
     private String firstName;
 
+    @Column(name = "last_name", length = 20)
     private String lastName;
 
+    @Column(name = "user_email", length = 40, unique = true)
     private String email;
 
+    @Column(name = "age")
     private int age;
+
+    @Column(name = "app_number", updatable = false)
+    private int applicationNumber;
 
     public Student() {
     }

@@ -32,7 +32,10 @@
 3.5. Introduction to Spring REST Architecture <br>
 3.6. Working with Controller Layer and HTTP Requests+Responses <br>
 3.7. Path Parameters and Query Parameters in Routing <br>
-3.8. Spring Data JPA <br>
+3.8. Spring Data JPA Introduction<br>
 3.9. Defining application properties with YAML data serialization file <br>
 3.10. Configuring PostgreSQL for database operations <br>
-3.11. Creating Entity class and mapping class fields with database schema <br>
+3.11. Creating Entity class and mapping class fields with database schema using Spring Hibernate ORM <br>
+3.12. Using JpaRepository for creating persistence layer and further implementation in upper application layers <br>
+3.13. Performing CRUD operations with JPA <br>
+3.14. Defining custom search functions in Repository file with JPA Query Methods <br>
