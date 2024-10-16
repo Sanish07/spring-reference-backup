@@ -25,18 +25,19 @@
 <br>
 
 3. <strong>Spring Boot</strong><br>
-3.1. Understanding Spring Boot project structure <br>
-3.2. Customizing Application Banner <br>
-3.3. Testing Spring Core features in Spring Boot application <br>
-3.4. Reading System and Custom Properties with Environment interface <br>
-3.5. Introduction to Spring REST Architecture <br>
-3.6. Working with Controller Layer and HTTP Requests+Responses <br>
-3.7. Path Parameters and Query Parameters in Routing <br>
-3.8. Spring Data JPA Introduction<br>
-3.9. Defining application properties with YAML data serialization file <br>
-3.10. Configuring PostgreSQL for database operations <br>
-3.11. Creating Entity class and mapping class fields with database schema using Spring Hibernate ORM <br>
-3.12. Using JpaRepository for creating persistence layer and further implementation in upper application layers <br>
-3.13. Performing CRUD operations with JPA <br>
-3.14. Defining custom search functions in Repository file with JPA Query Methods <br>
-3.15. Defining Relationships between entities using Hibernate Mappings <br>
+3.1. Introduction to Spring Boot <br>
+3.1.1. Understanding Spring Boot project structure <br>
+3.1.2. Customizing Application Banner <br>
+3.1.3. Testing Spring Core features in Spring Boot application <br>
+3.1.4. Reading System and Custom Properties with Environment interface <br>
+3.2. Introduction to Spring REST Architecture <br>
+3.2.1. Working with Controller Layer and HTTP Requests+Responses <br>
+3.2.2. Path Parameters and Query Parameters in Routing <br>
+3.3. Spring Data JPA Introduction<br>
+3.3.1. Defining application properties with YAML data serialization file <br>
+3.3.2. Configuring PostgreSQL for database operations <br>
+3.3.3. Creating Entity class and mapping class fields with database schema using Spring Hibernate ORM <br>
+3.3.4. Using JpaRepository for creating persistence layer and further implementation in upper application layers <br>
+3.3.5. Performing CRUD operations with JPA <br>
+3.3.6. Defining custom search functions in Repository file with JPA Query Methods <br>
+3.3.7. Defining Relationships between entities using Hibernate Mappings <br>
