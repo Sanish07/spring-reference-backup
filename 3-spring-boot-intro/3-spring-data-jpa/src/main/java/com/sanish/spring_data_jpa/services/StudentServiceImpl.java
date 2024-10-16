@@ -17,6 +17,7 @@ public class StudentServiceImpl implements StudentService{
         this.repository = repository;
     }
 
+    @Override
     @Transactional
     public Student saveStudent(Student student){
         return repository.save(student);
@@ -38,6 +39,7 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
+    @Transactional
     public void deleteStudent(int id) {
         repository.deleteById(id);
     }

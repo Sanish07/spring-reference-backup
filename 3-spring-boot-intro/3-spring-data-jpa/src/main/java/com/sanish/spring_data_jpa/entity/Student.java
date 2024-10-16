@@ -25,12 +25,18 @@ public class Student {
     @Column(name = "app_number", updatable = false)
     private int applicationNumber;
 
+    @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
+    private StudentProfile studentProfile; //Mapping with StudentProfile Table/Entity - Student is Primary/Parent Entity
+
+    @ManyToOne //Many students belong to single college
+    @JoinColumn(name = "college_id")
+    private College college; //Mapping with College Table - Student is Secondary wrt College Table
+
     public Student() {
     }
 
-    public Student(int id, String firstName, String lastName, String email, int age) {
+    public Student(String firstName, String lastName, String email, int age) {
         super();
-        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -75,6 +81,22 @@ public class Student {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public StudentProfile getStudentProfile() {
+        return studentProfile;
+    }
+
+    public void setStudentProfile(StudentProfile studentProfile) {
+        this.studentProfile = studentProfile;
+    }
+
+    public College getCollege() {
+        return college;
+    }
+
+    public void setCollege(College college) {
+        this.college = college;
     }
 
     @Override

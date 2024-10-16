@@ -39,3 +39,4 @@
 3.12. Using JpaRepository for creating persistence layer and further implementation in upper application layers <br>
 3.13. Performing CRUD operations with JPA <br>
 3.14. Defining custom search functions in Repository file with JPA Query Methods <br>
+3.15. Defining Relationships between entities using Hibernate Mappings <br>
