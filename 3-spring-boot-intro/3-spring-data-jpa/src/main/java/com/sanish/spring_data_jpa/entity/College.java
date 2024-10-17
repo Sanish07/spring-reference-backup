@@ -1,5 +1,6 @@
 package com.sanish.spring_data_jpa.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.List;
@@ -10,13 +11,13 @@ public class College {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "college_id")
     private int id;
 
     @Column(name = "college_name")
     private String name;
 
     @OneToMany(mappedBy = "college")
+    @JsonManagedReference //Specifies of Parent being in charge of serializing child entity
     private List<Student> students; //Mapping with Student table - College is primary entity
 
     public College() {

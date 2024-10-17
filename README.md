@@ -36,8 +36,11 @@
 3.3. <strong>Spring Data JPA Introduction</strong><br>
 &nbsp; &nbsp; &nbsp; 3.3.1. Defining application properties with YAML data serialization file <br>
 &nbsp; &nbsp; &nbsp; 3.3.2. Configuring PostgreSQL for database operations <br>
-&nbsp; &nbsp; &nbsp; 3.3.3. Creating Entity class and mapping class fields with database schema using Spring Hibernate ORM <br>
-&nbsp; &nbsp; &nbsp; 3.3.4. Using JpaRepository for creating persistence layer and further implementation in upper application layers <br>
+&nbsp; &nbsp; &nbsp; 3.3.3. Creating Entity class and mapping class fields with database schema using Spring Hibernate <br>
+&nbsp; &nbsp; &nbsp; 3.3.4. Using JpaRepository for availing persistence layer methods to service layer <br>
 &nbsp; &nbsp; &nbsp; 3.3.5. Performing CRUD operations with JPA <br>
 &nbsp; &nbsp; &nbsp; 3.3.6. Defining custom search functions in Repository file with JPA Query Methods <br>
 &nbsp; &nbsp; &nbsp; 3.3.7. Defining Relationships between entities using Hibernate Mappings <br>
+&nbsp; &nbsp; &nbsp; 3.3.8. Assigning secondary/child entity to primary/parent entity with API requests <br>
+&nbsp; &nbsp; &nbsp; 3.3.9. Resolving infinite loop of parent-child serialization-deserialization on Child's GET<br>
+

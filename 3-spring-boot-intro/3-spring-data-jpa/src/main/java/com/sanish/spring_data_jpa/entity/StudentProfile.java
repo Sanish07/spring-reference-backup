@@ -8,14 +8,13 @@ public class StudentProfile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "profile_id")
     private int id;
 
     @Column(name = "student_bio")
     private String bio;
 
     @OneToOne
-    @JoinColumn(name = "student_id") //Foreign Key will be created with name student_id
+    @JoinColumn(name = "student_id", unique = true) //Foreign Key will be created with name student_id
     private Student student; //Mapping with Student table/entity - StudentProfile is Secondary/Child Entity
 
     public StudentProfile() {

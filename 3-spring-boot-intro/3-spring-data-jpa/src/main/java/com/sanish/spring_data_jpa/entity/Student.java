@@ -1,5 +1,6 @@
 package com.sanish.spring_data_jpa.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -22,14 +23,15 @@ public class Student {
     @Column(name = "age")
     private int age;
 
-    @Column(name = "app_number", updatable = false)
-    private int applicationNumber;
+//    @Column(name = "app_number", updatable = false)
+//    private int applicationNumber;
 
     @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
     private StudentProfile studentProfile; //Mapping with StudentProfile Table/Entity - Student is Primary/Parent Entity
 
     @ManyToOne //Many students belong to single college
     @JoinColumn(name = "college_id")
+    @JsonBackReference //Avoids Parent's Serialization
     private College college; //Mapping with College Table - Student is Secondary wrt College Table
 
     public Student() {
