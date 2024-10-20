@@ -44,4 +44,5 @@
 &nbsp; &nbsp; &nbsp; 3.3.8. Assigning secondary/child entity to primary/parent entity with API requests <br>
 &nbsp; &nbsp; &nbsp; 3.3.9. Resolving infinite loop of parent-child serialization-deserialization on Child's GET<br>
 3.4. <strong>Spring DTO Pattern</strong><br>
-&nbsp; &nbsp; &nbsp; 3.4.1. Customizing REST API Server Responses through DTO pattern<br>
+&nbsp; &nbsp; &nbsp; 3.4.1. Customizing REST API Server Requests & Responses through DTO pattern<br>
+&nbsp; &nbsp; &nbsp; 3.4.2. Replacing POJOs with Java Records(jdk 14+) for DTO files creation for all entities<br>

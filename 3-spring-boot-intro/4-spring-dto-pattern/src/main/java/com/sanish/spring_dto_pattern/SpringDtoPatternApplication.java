@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 public class SpringDtoPatternApplication {
 
 	public static void main(String[] args) {
+		//To see how DTOs work see the organization and employee controllers post, get(All type) methods.
 		ApplicationContext context = SpringApplication.run(SpringDtoPatternApplication.class, args);
 	}
 
