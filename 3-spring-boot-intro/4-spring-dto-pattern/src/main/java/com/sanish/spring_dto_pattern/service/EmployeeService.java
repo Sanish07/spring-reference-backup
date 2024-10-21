@@ -1,5 +1,6 @@
 package com.sanish.spring_dto_pattern.service;
 
+import com.sanish.spring_dto_pattern.dto.EmployeeDto;
 import com.sanish.spring_dto_pattern.entity.Employee;
 
 import java.util.List;
@@ -10,5 +11,5 @@ public interface EmployeeService {
 
     List<Employee> getAllEmp();
 
-    Employee addNewEmployee(Employee employee);
+    Employee addNewEmployee(EmployeeDto employeeDto);
 }

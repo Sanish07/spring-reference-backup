@@ -46,3 +46,4 @@
 3.4. <strong>Spring DTO Pattern</strong><br>
 &nbsp; &nbsp; &nbsp; 3.4.1. Customizing REST API Server Requests & Responses through DTO pattern<br>
 &nbsp; &nbsp; &nbsp; 3.4.2. Replacing POJOs with Java Records(jdk 14+) for DTO files creation for all entities<br>
+&nbsp; &nbsp; &nbsp; 3.4.3. Refactoring the code to move all the business logic to service layer<br>

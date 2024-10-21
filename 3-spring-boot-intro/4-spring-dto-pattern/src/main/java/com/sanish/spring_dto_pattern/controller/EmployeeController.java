@@ -37,23 +37,9 @@ public class EmployeeController {
     @PostMapping("/employee")
     public ResponseEntity<Employee> saveNewEmp(
             @RequestBody EmployeeDto employeeDto){ //We receive EmployeeDto which also has org_id
-        Employee employeePojo = dtoToPojoEmp(employeeDto);
-        Employee savedEmp = employeeService.addNewEmployee(employeePojo);
+        Employee savedEmp = employeeService.addNewEmployee(employeeDto);
         return new ResponseEntity<>(savedEmp,HttpStatus.CREATED);
     }
 
-    public Employee dtoToPojoEmp(EmployeeDto employeeDto){
-        Employee employee = new Employee();
-        employee.setFullName(employeeDto.fullName());
-        employee.setAge(employeeDto.age());
-        employee.setRole(employeeDto.role());
 
-        Organization organization = new Organization(); //Setting organization object with DTO,
-        // only needs an org_id from request to link an employee with an organization
-        organization.setId(employeeDto.org_id());
-
-        employee.setOrganization(organization);
-
-        return employee;
-    }
 }
