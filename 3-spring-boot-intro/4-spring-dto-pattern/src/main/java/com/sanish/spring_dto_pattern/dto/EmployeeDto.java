@@ -1,9 +1,13 @@
 package com.sanish.spring_dto_pattern.dto;
 
+import jakarta.validation.constraints.NotEmpty;
+
 public record EmployeeDto(
+        @NotEmpty
         String fullName,
-        int age,
+        Integer age,
+        @NotEmpty
         String role,
-        int org_id
+        Integer org_id
 ){
 }

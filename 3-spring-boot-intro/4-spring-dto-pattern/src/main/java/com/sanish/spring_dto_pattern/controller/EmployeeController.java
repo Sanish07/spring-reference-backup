@@ -4,6 +4,7 @@ import com.sanish.spring_dto_pattern.dto.EmployeeDto;
 import com.sanish.spring_dto_pattern.entity.Employee;
 import com.sanish.spring_dto_pattern.entity.Organization;
 import com.sanish.spring_dto_pattern.service.EmployeeService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,7 +37,7 @@ public class EmployeeController {
 
     @PostMapping("/employee")
     public ResponseEntity<Employee> saveNewEmp(
-            @RequestBody EmployeeDto employeeDto){ //We receive EmployeeDto which also has org_id
+            @Valid @RequestBody EmployeeDto employeeDto){ //We receive EmployeeDto which also has org_id
         Employee savedEmp = employeeService.addNewEmployee(employeeDto);
         return new ResponseEntity<>(savedEmp,HttpStatus.CREATED);
     }

@@ -17,7 +17,7 @@ public class Employee {
     @Column(name = "emp_age")
     private int age;
 
-    @Column(name = "emp_role", length = 15)
+    @Column(name = "emp_role", length = 30)
     private String role;
 
     @ManyToOne
