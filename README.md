@@ -49,3 +49,5 @@
 &nbsp; &nbsp; &nbsp; 3.4.3. Refactoring the code to move all the business logic to service layer<br>
 &nbsp; &nbsp; &nbsp; 3.4.4. Basic Data Validation for Objects requested from API Request Body<br>
 &nbsp; &nbsp; &nbsp; 3.4.5. Handling bad request exceptions raised after data validation<br>
+&nbsp; &nbsp; &nbsp; 3.4.6. Introduction to Spring Testing with JUnit5<br>
+&nbsp; &nbsp; &nbsp; 3.4.7. Unit Testing basic methods of Mapper classes<br>
