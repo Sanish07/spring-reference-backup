@@ -24,15 +24,17 @@
 
 <br>
 
-3. <strong>Spring Boot</strong><br>
+3. <strong>Spring Boot</strong><br><br>
 3.1. <strong>Introduction to Spring Boot</strong> <br>
 &nbsp; &nbsp; &nbsp; 3.1.1. Understanding Spring Boot project structure<br>
 &nbsp; &nbsp; &nbsp; 3.1.2. Customizing Application Banner <br>
 &nbsp; &nbsp; &nbsp; 3.1.3. Testing Spring Core features in Spring Boot application <br>
 &nbsp; &nbsp; &nbsp; 3.1.4. Reading System and Custom Properties with Environment interface <br>
+<br>
 3.2. <strong>Introduction to Spring REST Architecture</strong> <br>
 &nbsp; &nbsp; &nbsp; 3.2.1. Working with Controller Layer and HTTP Requests+Responses <br>
 &nbsp; &nbsp; &nbsp; 3.2.2. Path Parameters and Query Parameters in Routing <br>
+<br>
 3.3. <strong>Spring Data JPA Introduction</strong><br>
 &nbsp; &nbsp; &nbsp; 3.3.1. Defining application properties with YAML data serialization file <br>
 &nbsp; &nbsp; &nbsp; 3.3.2. Configuring PostgreSQL for database operations <br>
@@ -43,11 +45,14 @@
 &nbsp; &nbsp; &nbsp; 3.3.7. Defining Relationships between entities using Hibernate Mappings <br>
 &nbsp; &nbsp; &nbsp; 3.3.8. Assigning secondary/child entity to primary/parent entity with API requests <br>
 &nbsp; &nbsp; &nbsp; 3.3.9. Resolving infinite loop of parent-child serialization-deserialization on Child's GET<br>
-3.4. <strong>Spring DTO Pattern and Data Validation</strong><br>
+<br>
+3.4. <strong>Spring DTO Pattern, Data Validation and Unit Testing</strong><br>
 &nbsp; &nbsp; &nbsp; 3.4.1. Customizing REST API Server Requests & Responses through DTO pattern<br>
 &nbsp; &nbsp; &nbsp; 3.4.2. Replacing POJOs with Java Records(jdk 14+) for DTO files creation for all entities<br>
 &nbsp; &nbsp; &nbsp; 3.4.3. Refactoring the code to move all the business logic to service layer<br>
 &nbsp; &nbsp; &nbsp; 3.4.4. Basic Data Validation for Objects requested from API Request Body<br>
 &nbsp; &nbsp; &nbsp; 3.4.5. Handling bad request exceptions raised after data validation<br>
 &nbsp; &nbsp; &nbsp; 3.4.6. Introduction to Spring Testing with JUnit5<br>
-&nbsp; &nbsp; &nbsp; 3.4.7. Unit Testing basic methods of Mapper classes<br>
+&nbsp; &nbsp; &nbsp; 3.4.7. Unit Testing basic methods of Mapper classes having no external dependencies/beans<br>
+&nbsp; &nbsp; &nbsp; 3.4.8. Achieving test isolation through Mockito framework by mocking and opening external beans<br>
+&nbsp; &nbsp; &nbsp; 3.4.9. Testing Service layer methods with Mockito framework and mocking method calls<br>

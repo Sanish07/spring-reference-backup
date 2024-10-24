@@ -17,6 +17,12 @@ class EmployeeMapperTest {
     }
 
     @Test
+    public void dtoToPojoEmp_should_throw_exception_if_dto_is_null(){
+        var exception = assertThrows(NullPointerException.class, () -> employeeMapper.dtoToPojoEmp(null));
+        assertEquals("EmployeeDto cannot be mapped as it is null.",exception.getMessage());
+    }
+
+    @Test
     public void shouldMapEmployeeDtoToPojo(){
         EmployeeDto employeeDto = new EmployeeDto("Sanish",23,
                 "Software Dev",2);

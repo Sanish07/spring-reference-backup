@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmployeeMapper {
     public Employee dtoToPojoEmp(EmployeeDto employeeDto){
+
+        if(employeeDto == null) throw new NullPointerException("EmployeeDto cannot be mapped as it is null.");
+
         Employee employee = new Employee();
         employee.setFullName(employeeDto.fullName());
         employee.setAge(employeeDto.age());
