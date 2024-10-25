@@ -53,3 +53,7 @@
 &nbsp; &nbsp; &nbsp; 3.4.7. Unit Testing basic methods of Mapper classes having no external dependencies/beans<br>
 &nbsp; &nbsp; &nbsp; 3.4.8. Achieving test isolation through Mockito framework by mocking and opening external beans<br>
 &nbsp; &nbsp; &nbsp; 3.4.9. Testing Service layer methods with Mockito framework and mocking method calls<br>
+
+<br>
+
+4. <strong>Spring Data JPA - Deep Dive</strong><br><br>

@@ -1,0 +1,20 @@
+spring:
+
+  application:
+    name: spring-data-jpa-demo
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_data_jpa
+    username: springstudent
+    password: springstudent
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: mysql
+
+server:
+  servlet:
+    context-path: /v1
