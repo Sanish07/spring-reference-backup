@@ -57,3 +57,5 @@
 <br>
 
 4. <strong>Spring Data JPA - Deep Dive</strong><br><br>
+4.1. Using Lombok library annotations for reducing POJO boilerplate <br>
+4.2. Understanding every ID generation strategy for primary key <br>
