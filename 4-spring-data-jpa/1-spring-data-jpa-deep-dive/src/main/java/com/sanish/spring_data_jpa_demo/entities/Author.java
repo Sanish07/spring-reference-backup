@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder //Will help us to create a builder pattern for the class for properties initialization
 @Entity
 @Table(name = "author_tbl")
 public class Author {
@@ -36,9 +38,9 @@ public class Author {
     @Column(name = "author_age")
     private Integer age;
 
-    @Column(name = "created_at", updatable = false, nullable = false)
-    private LocalDateTime createdAt;
-
-    @Column(name = "last_modified", insertable = false)
-    private LocalDateTime lastModified;
+//    @Column(name = "created_at", updatable = false, nullable = false)
+//    private LocalDateTime createdAt;
+//
+//    @Column(name = "last_modified", insertable = false)
+//    private LocalDateTime lastModified;
 }
