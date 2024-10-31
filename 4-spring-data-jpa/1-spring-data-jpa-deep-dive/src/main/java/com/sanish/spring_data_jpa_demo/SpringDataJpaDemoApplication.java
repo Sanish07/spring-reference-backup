@@ -15,7 +15,7 @@ public class SpringDataJpaDemoApplication {
 		ApplicationContext context = SpringApplication.run(SpringDataJpaDemoApplication.class, args);
 	}
 
-	@Bean
+	//@Bean
 	public CommandLineRunner commandLineRunner( //Using CommandLineRunner Bean we can perform CRUD operation without the need of controller.
 			AuthorRepository authorRepository
 	){
@@ -23,7 +23,6 @@ public class SpringDataJpaDemoApplication {
 			var author = Author.builder()
 					.firstName("Roberto")
 					.lastName("Carlos")
-					.age(55)
 					.email("carlos@gmail.com")
 					.build();
 

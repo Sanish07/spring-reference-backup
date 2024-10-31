@@ -56,8 +56,11 @@
 
 <br>
 
-4. <strong>Spring Data JPA - Deep Dive</strong><br><br>
+4. <strong>Spring Data JPA - Deep Dive</strong><br>
 4.1. Using Lombok library annotations for reducing POJO boilerplate <br>
 4.2. Understanding every ID generation strategy for primary key <br>
 4.3. Getting to know Hibernate Entity Lifecycle which is managed by Spring Data JPA internally <br>
 4.4. Using CommandLineRunner bean to test the repository/persistence layer methods <br>
+4.5. Unidirectional v/s Bidirectional mapping between entities <br>
+4.6. Understanding every type of Hibernate Advanced Entity-Relationship Mappings <br>
+4.7. @JoinColumn v/s @JoinTable <br>
