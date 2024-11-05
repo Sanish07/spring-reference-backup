@@ -3,17 +3,20 @@ package com.sanish.spring_data_jpa_demo.entities;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
-
+import lombok.experimental.SuperBuilder;
 import java.time.LocalDateTime;
 import java.util.List;
 
+
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder //Will help us to create a builder pattern for the class for properties initialization
+//@Builder //Will help us to create a builder pattern for the class for properties initialization
+@SuperBuilder
 @Entity
 @Table(name = "author_tbl")
-public class Author {
+public class Author extends BaseEntity{ //Each class/table extending BaseEntity will have its fields
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

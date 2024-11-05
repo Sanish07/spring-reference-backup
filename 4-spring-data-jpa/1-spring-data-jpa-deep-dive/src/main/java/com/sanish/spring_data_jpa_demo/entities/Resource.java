@@ -3,16 +3,15 @@ package com.sanish.spring_data_jpa_demo.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "resource_tbl")
-public class Resource {
+public class Resource{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
