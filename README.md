@@ -65,4 +65,4 @@
 4.6. Understanding every type of Hibernate Advanced Entity-Relationship Mappings <br>
 4.7. @JoinColumn v/s @JoinTable <br>
 4.8. Using @MappedSuperClass for creating common entity as implementation utlity for other entities <br>
-4.8. Introduction to JPA-Hibernate Entity Inheritance <br>
+4.9. Introduction to JPA-Hibernate Entity Inheritance <br>
