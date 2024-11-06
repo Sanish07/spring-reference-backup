@@ -66,3 +66,5 @@
 4.7. @JoinColumn v/s @JoinTable <br>
 4.8. Using @MappedSuperClass for creating common entity as implementation utlity for other entities <br>
 4.9. Introduction to JPA-Hibernate Entity Inheritance <br>
+4.10. Single Table strategy for entity inheritance and testing by persistence in database<br>
+4.11. The Use-case of @MappedSuperClass v/s @Inheritance <br>
