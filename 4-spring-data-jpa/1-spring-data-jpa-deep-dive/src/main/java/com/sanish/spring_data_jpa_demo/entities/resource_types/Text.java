@@ -4,6 +4,7 @@ import com.sanish.spring_data_jpa_demo.entities.Resource;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Inheritance;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -15,7 +16,8 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
-@DiscriminatorValue("T")
+//@DiscriminatorValue("T") - Only for Single table strategy
+@PrimaryKeyJoinColumn(name = "text_id")
 @Entity
 public class Text extends Resource {
     private String text_content;
