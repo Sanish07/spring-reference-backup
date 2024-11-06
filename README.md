@@ -69,3 +69,4 @@
 4.10. Single Table strategy for entity inheritance and testing by persistence in database<br>
 4.11. The Use-case of @MappedSuperClass v/s @Inheritance <br>
 4.12. Joined inheritance strategy and testing by persistence in database <br>
+4.13. Table Per Class strategy implementation and testing <br>
