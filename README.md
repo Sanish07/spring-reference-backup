@@ -70,3 +70,7 @@
 4.11. The Use-case of @MappedSuperClass v/s @Inheritance <br>
 4.12. Joined inheritance strategy and testing by persistence in database <br>
 4.13. Table Per Class strategy implementation and testing <br>
+4.14. Resolving Implicit Polymorphism in Table Per Class strategy using single table strategy annotations<br>
+4.15. Creating composite primary keys for a entity using @Embeddable & @EmbeddedId <br>
+4.16. Making reuable fields(through class) with @Embeddable and @Embedded <br>
+4.17. Examining advantage of Embedded Entity over MappedSuperClass - Resolving probable multiple inheritance issue <br>
