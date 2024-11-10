@@ -74,3 +74,6 @@
 4.15. Creating composite primary keys for a entity using @Embeddable & @EmbeddedId <br>
 4.16. Making reuable fields(through class) with @Embeddable and @Embedded <br>
 4.17. Examining advantage of Embedded Entity over MappedSuperClass - Resolving probable multiple inheritance issue <br>
+4.18. Using and Testing JPA Custom Query Methods/Derived Queries of Repository to fetch data <br>
+4.19. Github's Faker dependency for creating clone data for testing purposes <br>
+

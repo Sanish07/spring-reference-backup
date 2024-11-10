@@ -17,7 +17,7 @@ import lombok.experimental.SuperBuilder;
 public class Resource{
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "resource_name")

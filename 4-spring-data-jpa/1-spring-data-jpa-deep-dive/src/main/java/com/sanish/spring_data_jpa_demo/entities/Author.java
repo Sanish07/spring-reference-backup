@@ -31,9 +31,11 @@ public class Author extends BaseEntity{ //Each class/table extending BaseEntity 
     @Column(name = "author_email", unique = true)
     private String email;
 
+    @Column(name = "author_age")
+    private Integer age;
 
     @JsonManagedReference
-    @ManyToMany(mappedBy = "authors", cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "authors", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Course> courses;
 
 //    @GeneratedValue(
