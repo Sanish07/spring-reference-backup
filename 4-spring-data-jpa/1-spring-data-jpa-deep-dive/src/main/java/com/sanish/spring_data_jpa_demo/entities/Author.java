@@ -4,10 +4,18 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-import java.time.LocalDateTime;
 import java.util.List;
 
-
+@NamedQueries({
+        @NamedQuery(
+                name = "Author.namedQueryFindByAge",
+                query = "select a from Author a where a.age = :author_age"
+        ),
+        @NamedQuery(
+                name = "Author.namedQuerySetAllModTime",
+                query = "update Author a set a.lastModifiedAt = :time"
+        ),
+})
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor

@@ -73,7 +73,11 @@
 4.14. Resolving Implicit Polymorphism in Table Per Class strategy using single table strategy annotations<br>
 4.15. Creating composite primary keys for a entity using @Embeddable & @EmbeddedId <br>
 4.16. Making reuable fields(through class) with @Embeddable and @Embedded <br>
-4.17. Examining advantage of Embedded Entity over MappedSuperClass - Resolving probable multiple inheritance issue <br>
-4.18. Using and Testing JPA Custom Query Methods/Derived Queries of Repository to fetch data <br>
-4.19. Github's Faker dependency for creating clone data for testing purposes <br>
+4.17. Examining advantage of Embedded Entity over MappedSuperClass - Resolving probable multiple inheritance issue<br>
+4.18. Using and Testing JPA Custom Query Methods/Derived Queries of Repository to fetch data<br>
+4.19. Github's Faker dependency for creating clone data for testing purposes<br>
+4.20. Using @Query annotation in Repository interface to define custom queries<br>
+4.21. @Modifying and @Transactional for any queries that have Create, Update and Delete operations<br>
+4.22. Defining Named queries in Entity class for creating optimized queries (for various scenarios)<br>
+4.23. Implementing Specifications for Entities to create complex and type safe queries dynamically<br>  
 
