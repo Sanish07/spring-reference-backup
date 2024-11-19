@@ -81,6 +81,9 @@
 4.22. Defining Named queries in Entity class for creating optimized queries (for various scenarios)<br>
 4.23. Implementing Specifications for Entities to create complex and type safe queries dynamically<br>  
 
-5. <strong>Spring Security</strong><br>
-5.1. Setting up Spring Boot project with dependencies specific to Spring Security <br>
+5. <strong>Spring Security</strong><br><br>
+5.1. <strong>Spring Security Fundamentals</strong> <br>
+&nbsp; &nbsp; &nbsp; 5.1.1. Setting up Spring Boot project with dependencies specific to Spring Security <br>
+&nbsp; &nbsp; &nbsp; 5.1.2. Understanding Basic Auth header and its encoding <br> 
+&nbsp; &nbsp; &nbsp; 5.1.2. Creating In-memory user for our Spring application authentication <br> 
 
