@@ -1,0 +1,17 @@
+spring:
+
+  application:
+    name: managing_users
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_security
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: springstudent
+    password: springstudent
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: mysql
+

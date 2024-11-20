@@ -84,8 +84,11 @@
 <br>
 
 5. <strong>Spring Security</strong><br><br>
-5.1. <strong>Spring Security Fundamentals</strong> <br>
+5.1. <strong>Fundamentals</strong> <br>
 &nbsp; &nbsp; &nbsp; 5.1.1. Setting up Spring Boot project with dependencies specific to Spring Security <br>
 &nbsp; &nbsp; &nbsp; 5.1.2. Understanding Basic Auth header and its encoding <br> 
 &nbsp; &nbsp; &nbsp; 5.1.3. Creating In-memory user for our Spring application authentication <br> 
+5.2. <strong>Managing Users</strong> <br>
+&nbsp; &nbsp; &nbsp; 5.2.1. Enabling User authentication via database user entries<br>
+&nbsp; &nbsp; &nbsp; 5.2.2. Configuring UserDetails, UserDetailsService and WebConfig for user auth<br>
 
