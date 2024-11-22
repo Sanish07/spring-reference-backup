@@ -1,94 +1,114 @@
-## Spring Reference Manual
-<hr/>
+# Spring Reference Manual
 
-1. <strong>Spring Core</strong><br>
-1.1. Tight and Loose Coupling <br>
-1.2. XML Configuration for IoC and DI <br>
-1.3. Java Configuration for IoC and DI<br>
-1.4. Annotations and Hybrid configurations for IoC and DI<br>
-1.5. Bean Scopes and Scope Combinations<br>
-1.6. Lazy Initialization<br>
-1.7. Properties<br>
-1.8. XML value injection(Primitives and Non-primitives)<br>
-1.9. Spring Profiles<br>
+A walkthrough of all Spring Framework projects and concepts essential for developing the backend of enterprise web applications.
 
-<br>
+---
 
-2. <strong>Spring JDBC</strong><br>
-2.1. Spring JDBC Introduction <br>
-2.2. Configuring XML for database connection <br>
-2.3. Configuring Java config File for database connection(Alternative to XML config, with pre-defined classes bean initialization) <br>
-2.4. Insert, Update and Delete operations with JdbcTemplate <br>
-2.5. Configuring RowMapper implementation class for Select opearations <br>
-2.6. Single-object Select queries and Multi-Object Select Queries implementation with JdbcTemplate and RowMapper<br>
+## Table of Contents
 
-<br>
+1. [Spring Core](#spring-core)  
+2. [Spring JDBC](#spring-jdbc)  
+3. [Spring Boot](#spring-boot)  
+4. [Spring Data JPA - Deep Dive](#spring-data-jpa---deep-dive)  
+5. [Spring Security](#spring-security)  
 
-3. <strong>Spring Boot</strong><br><br>
-3.1. <strong>Introduction to Spring Boot</strong> <br>
-&nbsp; &nbsp; &nbsp; 3.1.1. Understanding Spring Boot project structure<br>
-&nbsp; &nbsp; &nbsp; 3.1.2. Customizing Application Banner <br>
-&nbsp; &nbsp; &nbsp; 3.1.3. Testing Spring Core features in Spring Boot application <br>
-&nbsp; &nbsp; &nbsp; 3.1.4. Reading System and Custom Properties with Environment interface <br><br>
-3.2. <strong>Introduction to Spring REST Architecture</strong> <br>
-&nbsp; &nbsp; &nbsp; 3.2.1. Working with Controller Layer and HTTP Requests+Responses <br>
-&nbsp; &nbsp; &nbsp; 3.2.2. Path Parameters and Query Parameters in Routing <br><br>
-3.3. <strong>Spring Data JPA Introduction</strong><br>
-&nbsp; &nbsp; &nbsp; 3.3.1. Defining application properties with YAML data serialization file <br>
-&nbsp; &nbsp; &nbsp; 3.3.2. Configuring PostgreSQL for database operations <br>
-&nbsp; &nbsp; &nbsp; 3.3.3. Creating Entity class and mapping class fields with database schema using Spring Hibernate <br>
-&nbsp; &nbsp; &nbsp; 3.3.4. Using JpaRepository for availing persistence layer methods to service layer <br>
-&nbsp; &nbsp; &nbsp; 3.3.5. Performing CRUD operations with JPA <br>
-&nbsp; &nbsp; &nbsp; 3.3.6. Defining custom search functions in Repository file with JPA Query Methods <br>
-&nbsp; &nbsp; &nbsp; 3.3.7. Defining Relationships between entities using Hibernate Mappings <br>
-&nbsp; &nbsp; &nbsp; 3.3.8. Assigning secondary/child entity to primary/parent entity with API requests <br>
-&nbsp; &nbsp; &nbsp; 3.3.9. Resolving infinite loop of parent-child serialization-deserialization on Child's GET<br><br>
-3.4. <strong>Spring DTO Pattern, Data Validation and Unit Testing</strong><br>
-&nbsp; &nbsp; &nbsp; 3.4.1. Customizing REST API Server Requests & Responses through DTO pattern<br>
-&nbsp; &nbsp; &nbsp; 3.4.2. Replacing POJOs with Java Records(jdk 14+) for DTO files creation for all entities<br>
-&nbsp; &nbsp; &nbsp; 3.4.3. Refactoring the code to move all the business logic to service layer<br>
-&nbsp; &nbsp; &nbsp; 3.4.4. Basic Data Validation for Objects requested from API Request Body<br>
-&nbsp; &nbsp; &nbsp; 3.4.5. Handling bad request exceptions raised after data validation<br>
-&nbsp; &nbsp; &nbsp; 3.4.6. Introduction to Spring Testing with JUnit5<br>
-&nbsp; &nbsp; &nbsp; 3.4.7. Unit Testing basic methods of Mapper classes having no external dependencies/beans<br>
-&nbsp; &nbsp; &nbsp; 3.4.8. Achieving test isolation through Mockito framework by mocking and opening external beans<br>
-&nbsp; &nbsp; &nbsp; 3.4.9. Testing Service layer methods with Mockito framework and mocking method calls<br>
+---
 
-<br>
+## 1. Spring Core
 
-4. <strong>Spring Data JPA - Deep Dive</strong><br>
-4.1. Using Lombok library annotations for reducing POJO boilerplate <br>
-4.2. Understanding every ID generation strategy for primary key <br>
-4.3. Getting to know Hibernate Entity Lifecycle which is managed by Spring Data JPA internally <br>
-4.4. Using CommandLineRunner bean to test the repository/persistence layer methods <br>
-4.5. Unidirectional v/s Bidirectional mapping between entities <br>
-4.6. Understanding every type of Hibernate Advanced Entity-Relationship Mappings <br>
-4.7. @JoinColumn v/s @JoinTable <br>
-4.8. Using @MappedSuperClass for creating common entity as implementation utlity for other entities <br>
-4.9. Introduction to JPA-Hibernate Entity Inheritance <br>
-4.10. Single Table strategy for entity inheritance and testing by persistence in database<br>
-4.11. The Use-case of @MappedSuperClass v/s @Inheritance <br>
-4.12. Joined inheritance strategy and testing by persistence in database <br>
-4.13. Table Per Class strategy implementation and testing <br>
-4.14. Resolving Implicit Polymorphism in Table Per Class strategy using single table strategy annotations<br>
-4.15. Creating composite primary keys for a entity using @Embeddable & @EmbeddedId <br>
-4.16. Making reuable fields(through class) with @Embeddable and @Embedded <br>
-4.17. Examining advantage of Embedded Entity over MappedSuperClass - Resolving probable multiple inheritance issue<br>
-4.18. Using and Testing JPA Custom Query Methods/Derived Queries of Repository to fetch data<br>
-4.19. Github's Faker dependency for creating clone data for testing purposes<br>
-4.20. Using @Query annotation in Repository interface to define custom queries<br>
-4.21. @Modifying and @Transactional for any queries that have Create, Update and Delete operations<br>
-4.22. Defining Named queries in Entity class for creating optimized queries (for various scenarios)<br>
-4.23. Implementing Specifications for Entities to create complex and type safe queries dynamically<br>  
+### 1.1. IoC and DI Basics
+- **Tight and Loose Coupling**
+- **XML Configuration** for IoC and DI
+- **Java Configuration** for IoC and DI
+- **Annotations and Hybrid Configurations** for IoC and DI
+- **Bean Scopes** and Scope Combinations
+- **Lazy Initialization**
+- **Properties**
+- **XML Value Injection** (Primitives and Non-primitives)
+- **Spring Profiles**
 
-<br>
+---
 
-5. <strong>Spring Security</strong><br><br>
-5.1. <strong>Fundamentals</strong> <br>
-&nbsp; &nbsp; &nbsp; 5.1.1. Setting up Spring Boot project with dependencies specific to Spring Security <br>
-&nbsp; &nbsp; &nbsp; 5.1.2. Understanding Basic Auth header and its encoding <br> 
-&nbsp; &nbsp; &nbsp; 5.1.3. Creating In-memory user for our Spring application authentication <br> 
-5.2. <strong>Managing Users</strong> <br>
-&nbsp; &nbsp; &nbsp; 5.2.1. Enabling User authentication via database user entries<br>
-&nbsp; &nbsp; &nbsp; 5.2.2. Configuring UserDetails, UserDetailsService and WebConfig for user auth<br>
+## 2. Spring JDBC
+
+### 2.1. Introduction
+- **Spring JDBC Introduction**
+- Configuring **XML for Database Connection**
+- Configuring **Java Config File for Database Connection** (Alternative to XML Config)
+- Insert, Update, and Delete Operations with **`JdbcTemplate`**
+- Configuring **`RowMapper` Implementation Class** for Select Operations
+- Single-Object Select Queries and Multi-Object Select Queries with **`JdbcTemplate`** and **`RowMapper`**
+
+---
+
+## 3. Spring Boot
+
+### 3.1. Introduction to Spring Boot
+- Understanding Spring Boot **Project Structure**
+- Customizing the **Application Banner**
+- Testing Spring Core Features in a **Spring Boot Application**
+- Reading **System and Custom Properties** with the `Environment` Interface
+
+### 3.2. Introduction to Spring REST Architecture
+- Working with the **Controller Layer** and HTTP Requests/Responses
+- Using **Path Parameters** and **Query Parameters** in Routing
+
+### 3.3. Spring Data JPA Introduction
+- Defining Application Properties with a **YAML Data Serialization File**
+- Configuring **PostgreSQL** for Database Operations
+- Creating **Entity Classes** and Mapping Fields with Database Schemas
+- Using **`JpaRepository`** for Persistence Layer Methods
+- Performing **CRUD Operations** with JPA
+- Defining Custom Search Functions in the Repository with **JPA Query Methods**
+- Defining **Entity Relationships** with Hibernate Mappings
+- Assigning Secondary/Child Entities to Primary/Parent Entities via **API Requests**
+- Resolving Parent-Child Serialization Issues on **Child's GET Requests**
+
+### 3.4. Spring DTO Pattern, Data Validation, and Unit Testing
+- Customizing REST API Requests and Responses with the **DTO Pattern**
+- Using **Java Records (JDK 14+)** for DTO Files Creation
+- Refactoring Code to Move Business Logic to the **Service Layer**
+- Performing **Basic Data Validation** for API Request Objects
+- Handling **Bad Request Exceptions** After Validation
+- Introduction to Spring Testing with **JUnit 5**
+- Unit Testing Basic Methods of **Mapper Classes**
+- Achieving Test Isolation with **Mockito** by Mocking External Beans
+- Testing **Service Layer Methods** with **Mockito**
+
+---
+
+## 4. Spring Data JPA - Deep Dive
+
+### Advanced JPA Concepts
+- Using **Lombok Annotations** to Reduce Boilerplate Code
+- Understanding **Primary Key ID Generation Strategies**
+- Exploring the **Hibernate Entity Lifecycle**
+- Testing Repository Methods with the **`CommandLineRunner` Bean**
+- Unidirectional vs. Bidirectional Entity Mappings
+- Advanced **Hibernate Entity-Relationship Mappings**
+
+### Inheritance and Embedded Entities
+- Using **`@MappedSuperclass`** for Common Entities
+- Exploring JPA-Hibernate **Entity Inheritance Strategies**
+- Creating Composite Primary Keys with **`@Embeddable`** and **`@EmbeddedId`**
+- Resolving Multiple Inheritance Issues with **Embedded Entities**
+
+### Custom Queries and Specifications
+- Defining Custom Queries with the **`@Query` Annotation**
+- Creating Optimized Queries with **Named Queries**
+- Implementing **Specifications** for Dynamic and Type-Safe Queries
+
+---
+
+## 5. Spring Security
+
+### 5.1. Setting up
+- Setting up a **Spring Boot Project** with Dependencies for Spring Security
+- Understanding the **Basic Auth Header** and Its Encoding
+- Creating an **In-Memory User** for Authentication
+
+### 5.2. Managing Users
+- Enabling User Authentication via **Database User Entries**
+- Configuring **`UserDetails`**, **`UserDetailsService`**, and **`WebConfig` Classes** for Authentication
+- Managing User Authorities with the **`GrantedAuthority` Interface**
 

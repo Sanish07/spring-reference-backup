@@ -1,7 +1,10 @@
 package com.sanish.managing_users.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 
 @Data
@@ -21,5 +24,18 @@ public class User {
 
     @Column(name = "password")
     private String password;
+
+    @JsonBackReference
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "users_authorities",
+            joinColumns = {
+                    @JoinColumn(name = "user_id")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name = "authority_id")
+            }
+    )
+    private List<Authority> authorities;
 
 }

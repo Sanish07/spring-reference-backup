@@ -6,6 +6,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+
+import java.util.Optional;
 
 @SpringBootApplication
 public class ManagingUsersApplication {
@@ -14,15 +17,20 @@ public class ManagingUsersApplication {
 		ApplicationContext context = SpringApplication.run(ManagingUsersApplication.class, args);
 	}
 
-//	@Bean
+	@Bean
 	public CommandLineRunner commandLineRunner(UserRepository userRepository){
 		return args ->{
-			User new_user = User.builder()
+			/*User new_user = User.builder()
 					.username("sanish")
 					.password("123")
 					.build();
 
 			userRepository.save(new_user);
+			*/
+
+			/*Optional<User> user = userRepository.findUserByUsername("sanish");
+			user.ifPresent(u -> System.out.println(u.getUsername()));*/
+
 		};
 	}
 

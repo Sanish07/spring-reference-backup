@@ -10,8 +10,6 @@ public class DemoController {
 
     @GetMapping("/get1")
     public ResponseEntity<String> getUser(){
-
-
-        return new ResponseEntity<>("abc", HttpStatus.OK);
+        return new ResponseEntity<>("Response from API", HttpStatus.OK);
     }
 }
