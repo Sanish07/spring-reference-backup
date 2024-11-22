@@ -6,11 +6,11 @@ A walkthrough of all Spring Framework projects and concepts essential for develo
 
 ## Table of Contents
 
-1. [Spring Core](#spring-core)  
-2. [Spring JDBC](#spring-jdbc)  
-3. [Spring Boot](#spring-boot)  
-4. [Spring Data JPA - Deep Dive](#spring-data-jpa---deep-dive)  
-5. [Spring Security](#spring-security)  
+1. [Spring Core](#1-spring-core)  
+2. [Spring JDBC](#2-spring-jdbc)  
+3. [Spring Boot](#3-spring-boot)  
+4. [Spring Data JPA - Deep Dive](#4-spring-data-jpa---deep-dive)  
+5. [Spring Security](#5-spring-security)  
 
 ---
 
