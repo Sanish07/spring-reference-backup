@@ -112,3 +112,8 @@ A walkthrough of all Spring Framework projects and concepts essential for develo
 - Configuring **`UserDetails`**, **`UserDetailsService`**, and **`WebConfig` Classes** for Authentication
 - Managing User Authorities with the **`GrantedAuthority` Interface**
 
+### 5.3. Implementing Key-Based Custom Authentication 
+- Defining **`SecurityFilterChain`** bean in configuration class
+- Creating Custom Authentication Filter class as a part of Filter Chain
+- Writing implementations of `AuthenticationManager` and `AuthenticationProvider` for our custom filter
+
