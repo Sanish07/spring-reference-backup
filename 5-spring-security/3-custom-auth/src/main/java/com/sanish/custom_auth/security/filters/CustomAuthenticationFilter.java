@@ -37,14 +37,15 @@ public class CustomAuthenticationFilter extends OncePerRequestFilter {
         //3. Get back auth from manager
         //4. if object is authenticated then send request to next filter in chain
 
-        String key = String.valueOf(request.getHeader("key")); //Get key from the header
+        String key = String.valueOf(request.getHeader("key")); //Get 'key' header from the http request
         CustomAuthentication auth = new CustomAuthentication(false,key); //1
 
-        var manager_response = customAuthenticationManager.authenticate(null); // 2 and 3
+        var manager_response = customAuthenticationManager.authenticate(auth); // 2 and 3
 
         if(manager_response.isAuthenticated()) { //4
             SecurityContextHolder.getContext().setAuthentication(manager_response);
-            //This line later will help us in setting authentication and identify which type
+            //1- After header key matches with internal key, we update the security context as user auth passed.
+            //2- This line help us in setting authentication and identify which type
             //user actually authenticated and further can be processed by authorization filter
 
             filterChain.doFilter(request, response);

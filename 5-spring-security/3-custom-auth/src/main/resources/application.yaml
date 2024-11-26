@@ -1,0 +1,9 @@
+spring:
+
+  application:
+    name: custom_auth
+
+
+authentication:
+   secret-key: securityforauth
+

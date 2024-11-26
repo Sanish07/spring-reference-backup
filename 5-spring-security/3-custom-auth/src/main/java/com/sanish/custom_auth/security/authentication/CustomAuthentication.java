@@ -16,7 +16,6 @@ public class CustomAuthentication implements Authentication {
     private final boolean authentication;
     private final String key;
 
-    @Autowired
     public CustomAuthentication(boolean authentication, String key){
         this.authentication = authentication;
         this.key = key;
