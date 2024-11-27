@@ -116,6 +116,9 @@ A walkthrough of all Spring Framework projects and concepts essential for develo
 - Defining **`SecurityFilterChain`** bean in configuration class
 - Creating Custom Authentication Filter class as a part of Filter Chain
 - Writing implementations of `AuthenticationManager` and `AuthenticationProvider` for our custom filter
-- Understanding the workflow of Authentication process inside Auth Filter
+- Understanding the workflow of **Authentication process inside Authentication Filter**
 - Testing and Debugging the Key-based Custom Authentication application  
+
+### 5.4. Multiple Authentication Providers
+- Overview of **Chaining Default Filters with Custom Filters**
 

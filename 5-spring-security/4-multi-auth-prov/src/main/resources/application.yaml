@@ -1,0 +1,7 @@
+spring:
+  application:
+       name: multi_auth_prov_demo
+
+
+app-security:
+  api-secret-key: verysecretkey
