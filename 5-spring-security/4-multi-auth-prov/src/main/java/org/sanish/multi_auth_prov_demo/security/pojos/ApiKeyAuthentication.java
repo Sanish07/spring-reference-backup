@@ -8,10 +8,10 @@ import org.springframework.security.core.GrantedAuthority;
 import java.util.Collection;
 import java.util.List;
 
-@RequiredArgsConstructor
+@RequiredArgsConstructor //Lombok will create constructor for all non-null & final fields
 public class ApiKeyAuthentication implements Authentication {
 
-    private String apiKey;
+    private final String apiKey;
     private boolean authenticated;
 
     @Override

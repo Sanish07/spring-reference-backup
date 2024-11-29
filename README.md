@@ -121,4 +121,6 @@ A walkthrough of all Spring Framework projects and concepts essential for develo
 
 ### 5.4. Multiple Authentication Providers
 - Overview of **Chaining Default Filters with Custom Filters**
+- Chaining multiple filters and **availing multiple authentication methods for an user**
+- **`addFilterBefore()`** vs **`addFilterAfter()`** vs **`addFilterAt()`**
 
