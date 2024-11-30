@@ -124,3 +124,8 @@ A walkthrough of all Spring Framework projects and concepts essential for develo
 - Chaining multiple filters and **availing multiple authentication methods for an user**
 - **`addFilterBefore()`** vs **`addFilterAfter()`** vs **`addFilterAt()`**
 
+### 5.5. Endpoint Authorization
+- **Understanding endpoint authorization** associated methods
+- Testing the chain of different combinations of matcher methods with authorization rules
+- Use of different **authorization rules**
+
