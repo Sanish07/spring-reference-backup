@@ -18,18 +18,26 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.httpBasic(httpSecurityHttpBasicConfigurer -> {})
-                .authorizeHttpRequests(auth -> //Endpoint level authorization
-                auth.anyRequest()
-                        .access(new WebExpressionAuthorizationManager("isAuthenticated() and hasAuthority('read')")));
-
+                .authorizeHttpRequests((auth) -> auth    //Endpoint level authorization
+                        .requestMatchers("/demo").hasAuthority("write")
+                        .anyRequest().access(new WebExpressionAuthorizationManager("isAuthenticated() and hasAuthority('read')")))
+        ;
         return http.build();
     }
+
+    /* Endpoint authorization is all about:
+    1. Matcher methods : anyRequest(), **NEW** requestMatchers() -> [previously - mvcMatchers(), antMatchers(), regexMatchers()]
+    2. Authorization rules : authenticated(), permitAll(), denyAll(), hasAuthority(), hasRole()
+                             access()
+     */
+
     //auth.anyRequest().authenticated() - all routes (anyRequest()) are accessible to authenticated user.
     //auth.anyRequest().permitAll() - all routes are accessible to authenticated/non-authenticated users, but not with the wrong user/password
     //auth.anyRequest().hasAuthority("read") - all routes are accessible to user with 'read' authority
     //auth.anyRequest().hasAnyAuthority("read", "write") - all routes are accessible to user with 'read' or 'write' authority
     /* .access(new WebExpressionAuthorizationManager("isAuthenticated() and hasAuthority('read')"))
      - Access all routes to a user which is authen. and has read permission (uses SpEl inside the object) */
+    //.requestMatchers("/demo").hasAuthority("write") - demo route is accessible to users with write authority
 
     @Bean
     public UserDetailsService userDetailsService() {

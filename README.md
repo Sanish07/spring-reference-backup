@@ -128,4 +128,5 @@ A walkthrough of all Spring Framework projects and concepts essential for develo
 - **Understanding endpoint authorization** associated methods
 - Testing the chain of different combinations of matcher methods with authorization rules
 - Use of different **authorization rules**
+- Introduction to requestMatchers() matcher method (Spring Security 5.8+)
 
