@@ -135,4 +135,9 @@ A walkthrough of all Spring Framework projects and concepts essential for develo
 - Securing endpoints under the **same route prefix group**
 - Configuring matchers for the same endpoint with **different HTTP methods**
 
+### 5.7. Method Authorization
+- Securing methods in controller, service, and repository classes using **Method-level authorization**
+- Overview of **`@EnableMethodSecurity`** in the **`WebSecurityConfig`** class
+- Utilizing **`@PreAuthorize`** to specify authorization rules for methods
+
 
