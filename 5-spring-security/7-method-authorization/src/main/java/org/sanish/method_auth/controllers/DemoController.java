@@ -4,12 +4,14 @@ import org.sanish.method_auth.security.condition_eval.Test2ConditionEval;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PostAuthorize;
+import org.springframework.security.access.prepost.PostFilter;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.access.prepost.PreFilter;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 public class DemoController {
@@ -66,5 +68,28 @@ public class DemoController {
 
         System.out.println("Method is still executed..."); //Doesn't matter whether the response was sent or not, entire method would still be executed
         return response;
+    }
+
+    //PreFilter works when we accept list or Collection parameter in the method
+    @GetMapping("/test4")
+    @PreFilter(" filterObject.contains('a') ")
+    public String test4(@RequestBody List<String> wordsList){
+        System.out.println(wordsList); //Only those words would be printed from passed values in request body which contain 'a' as substring
+        return "test4";
+    }
+
+    //Post Filter works when return type from method is a list or collection
+    @GetMapping("/test5")
+    @PostFilter(" filterObject.contains('a') ")
+    public List<String> test5(){
+        List<String> wordsList = new ArrayList<>();
+        wordsList.add("rain");
+        wordsList.add("snow");
+        wordsList.add("evening");
+        wordsList.add("fang");
+        wordsList.add("box");
+        wordsList.add("ball");
+
+        return wordsList;
     }
 }

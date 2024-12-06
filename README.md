@@ -139,5 +139,6 @@ A walkthrough of all Spring Framework projects and concepts essential for develo
 - Securing methods in controller, service, and repository classes using **Method-level authorization**
 - Overview of **`@EnableMethodSecurity`** in the **`WebSecurityConfig`** class
 - Utilizing **`@PreAuthorize`** and **`@PostAuthorize`** to specify authorization rules for methods
+- Using **`@PreFilter`** and **`@PostFilter`** to filter incoming and outgoing collection object requests
 
 
